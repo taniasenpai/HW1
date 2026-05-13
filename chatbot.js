@@ -1,59 +1,126 @@
-const questions = [
-  {
-    question: "hello",
-    answer: "Hi! How can I help you today?"
-  },
-  {
-    question: "who are you",
-    answer: "I am a simple chatbot built with JavaScript."
-  },
-  {
-    question: "projects",
-    answer: "You can check my projects page in the navigation menu."
-  },
-  {
-    question: "bye",
-    answer: "Goodbye! Have a nice day 😊"
-  }
+let questions = [
+    {
+        question: "What do you think about my site?",
+        options: {
+            a: "I like it, it's so cute! 𐙚 ‧₊˚ ⋅",
+            b: "It could use some work.."
+        },
+        correctAnswer: "a",
+        correctResponse: "Super!",
+        incorrectResponse: "Okai, I'll keep that in mind."
+    },
+    {
+        question: "Whats your opinion about Tania?",
+        options: {
+            a: "My favourite person!",
+            b: "I HATE her smh"
+        },
+        correctAnswer: "a",
+        correctResponse: "Yay!",
+        incorrectResponse: "Your opinion is not valid."
+    },
+    {
+        question: "Do you enjoy music?",
+        options: {
+            a: "Yes",
+            b: "No"
+        },
+        correctAnswer: "a",
+        correctResponse: "Music makes everything better",
+        incorrectResponse: "Oh, that's unexpected!"
+    },
+    {
+        question: "Do you like anime?",
+        options: {
+            a: "Yes",
+            b: "NO!"
+        },
+        correctAnswer: "a",
+        correctResponse: "OMG Yay me too",
+        incorrectResponse: "You should give it a try."
+    },
+    {
+        question: "Do you prefer cats or dogs?",
+        options: {
+            a: "Cats",
+            b: "Dogs"
+        },
+        correctAnswer: "a",
+        correctResponse: "The only right answer!",
+        incorrectResponse: "Bye!"
+    }
 ];
 
-const chatBox = document.getElementById("chatBox");
-const form = document.getElementById("chatForm");
-const input = document.getElementById("userInput");
+let currentQuestionIndex = 0;
 
-function addMessage(text, type) {
-  const msg = document.createElement("div");
-  msg.classList.add("message", type);
-  msg.textContent = text;
+let chatContainer = document.getElementById("chatBox");
+let chatForm = document.getElementById("chatForm");
+let userInput = document.getElementById("userInput");
 
-  chatBox.appendChild(msg);
+// 💬 START MESSAGE
+function startChat() {
+    let startMsg = document.createElement("div");
+    startMsg.classList.add("message", "bot");
+    startMsg.innerHTML = `<strong>Bot:</strong> Hi! Let's start the quiz 💬`;
+    chatContainer.appendChild(startMsg);
 
-  chatBox.scrollTop = chatBox.scrollHeight;
+    displayQuestion();
 }
 
-function getAnswer(userText) {
-  userText = userText.toLowerCase().trim();
+startChat();
 
-  for (let item of questions) {
-    if (userText === item.question) {
-      return item.answer;
+function displayQuestion() {
+    let currentQuestion = questions[currentQuestionIndex];
+
+    let optionsHTML = Object.keys(currentQuestion.options)
+        .map(key => `${key}. ${currentQuestion.options[key]}`)
+        .join("<br>");
+
+    let botResponse = document.createElement("div");
+    botResponse.classList.add("message", "bot");
+    botResponse.innerHTML = `<strong>Bot:</strong> ${currentQuestion.question}<br>${optionsHTML}`;
+
+    chatContainer.appendChild(botResponse);
+
+    scrollChatContainerToBottom();
+}
+
+function scrollChatContainerToBottom() {
+    chatContainer.scrollTop = chatContainer.scrollHeight;
+}
+
+chatForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    let userResponse = userInput.value.trim().toLowerCase();
+
+    if (!["a", "b"].includes(userResponse)) {
+        alert("Please type only 'a' or 'b'");
+        return;
     }
-  }
 
-  return "Sorry, I don't understand that question.";
-}
+    let userMessage = document.createElement("div");
+    userMessage.classList.add("message", "user");
+    userMessage.innerHTML = `<strong>You:</strong> ${userResponse}`;
+    chatContainer.appendChild(userMessage);
 
-form.addEventListener("submit", function(e) {
-  e.preventDefault();
+    let currentQuestion = questions[currentQuestionIndex];
 
-  const userText = input.value.trim();
-if (!userText) return;
+    let botResponse = document.createElement("div");
+    botResponse.classList.add("message", "bot");
 
-  addMessage(userText, "user");
+    if (userResponse === currentQuestion.correctAnswer) {
+        botResponse.innerHTML = `<strong>Bot:</strong> ${currentQuestion.correctResponse}`;
+    } else {
+        botResponse.innerHTML = `<strong>Bot:</strong> ${currentQuestion.incorrectResponse}`;
+    }
 
-  const botReply = getAnswer(userText);
-  addMessage(botReply, "bot");
+    chatContainer.appendChild(botResponse);
 
-  input.value = "";
+    currentQuestionIndex = (currentQuestionIndex + 1) % questions.length;
+
+    userInput.value = "";
+
+    displayQuestion();
+    scrollChatContainerToBottom();
 });
-addMessage("Hi! Ask me something 😊", "bot");
