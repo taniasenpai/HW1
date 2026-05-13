@@ -1,0 +1,236 @@
+/* Auth Page */
+.auth-page {
+  position: relative;
+  width: 1440px;
+  height: 1024px;
+  background: #FFFFFF;
+}
+
+/* Rectangle 1 */
+.rectangle-1 {
+  box-sizing: border-box;
+  position: absolute;
+  width: 580px;
+  height: 840px;
+  left: 134px;
+  top: 116px;
+
+  background: linear-gradient(180deg, #FFC0CB 0%, #F7E6E9 100%);
+  border: 1px solid #AD6363;
+}
+
+/* Welcome back! */
+.welcome-back {
+  position: absolute;
+  width: 364px;
+  height: 77px;
+  left: 242px;
+  top: 498px;
+
+  font-family: 'Kalam';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 77px;
+
+  color: #B63F69;
+}
+
+/* Rectangle 2 */
+.rectangle-2 {
+  box-sizing: border-box;
+  position: absolute;
+  width: 580px;
+  height: 840px;
+  left: 714px;
+  top: 116px;
+
+  background: #FFFFFF;
+  border: 1px solid #AD6363;
+  box-shadow: 0px 4px 4px #B63F69;
+}
+
+/* Component 2 */
+.component-2 {
+  position: absolute;
+  width: 239px;
+  height: 51px;
+  left: 1034px;
+  top: 635px;
+}
+
+/* Rectangle 6 */
+.component-2 .rectangle-6 {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 9.8%;
+  bottom: -9.8%;
+
+  background: #FF69B4;
+  border-radius: 12px;
+}
+
+/* Login */
+.login {
+  position: absolute;
+  left: 27.73%;
+  right: 28.15%;
+  top: 10.53%;
+  bottom: 0%;
+
+  font-family: 'Kalam';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 51px;
+
+  color: #FFFFFF;
+}
+
+/* Password */
+.password-label {
+  position: absolute;
+  width: 130px;
+  height: 51px;
+  left: 759px;
+  top: 487px;
+
+  font-family: 'Kalam';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 51px;
+
+  color: #FFB6C1;
+}
+
+/* Email */
+.email-label {
+  position: absolute;
+  width: 77px;
+  height: 51px;
+  left: 765px;
+  top: 333px;
+
+  font-family: 'Kalam';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 51px;
+
+  color: #FFB6C1;
+}
+
+/* Sign in */
+.sign-in {
+  position: absolute;
+  width: 147px;
+  height: 77px;
+  left: 930px;
+  top: 241px;
+
+  font-family: 'Kalam';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 77px;
+}
+
+/* Rectangle 3 */
+.rectangle-3 {
+  box-sizing: border-box;
+  position: absolute;
+  width: 480px;
+  height: 65px;
+  left: 759px;
+  top: 397px;
+
+  background: #FFFFFF;
+  border: 1px solid #FFB6C1;
+}
+
+/* Email Placeholder */
+.email-placeholder {
+  position: absolute;
+  width: 77px;
+  height: 51px;
+  left: 765px;
+  top: 411px;
+
+  font-family: 'Kalam';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 51px;
+
+  color: rgba(170, 170, 170, 0.43);
+}
+
+/* Rectangle 4 */
+.rectangle-4 {
+  box-sizing: border-box;
+  position: absolute;
+  width: 480px;
+  height: 65px;
+  left: 759px;
+  top: 542px;
+
+  background: #FFFFFF;
+  border: 1px solid #FFB6C1;
+}
+
+/* Password Placeholder */
+.password-placeholder {
+  position: absolute;
+  width: 130px;
+  height: 51px;
+  left: 765px;
+  top: 556px;
+
+  font-family: 'Kalam';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 51px;
+
+  color: rgba(170, 170, 170, 0.56);
+}
+
+/* Component 1 */
+.component-1 {
+  position: absolute;
+  width: 239px;
+  height: 51px;
+  left: 728px;
+  top: 635px;
+}
+
+/* Rectangle 6 */
+.component-1 .rectangle-6 {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 9.8%;
+  bottom: -9.8%;
+
+  background: #FF69B4;
+  border-radius: 12px;
+}
+
+/* Sign up */
+.sign-up {
+  position: absolute;
+  left: 27.73%;
+  right: 28.15%;
+  top: 10.53%;
+  bottom: 0%;
+
+  font-family: 'Kalam';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 51px;
+
+  color: #FFFFFF;
+}

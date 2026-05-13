@@ -1,0 +1,48 @@
+body {
+    background-color: #f2ceee;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Card only */
+#card-container {
+    width: 300px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.profile-img {
+    width: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #dc3b9e;
+}
+
+.name {
+    color: #f180ca;
+    font-size: 22px;
+}
+
+.subtitle {
+    color: rgb(235, 163, 207);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.contact {
+    margin: 5px 0;
+}
+
+.link {
+    color: #d17cea;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}

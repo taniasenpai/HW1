@@ -12,55 +12,69 @@
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
 <header>
-  <h1>My Portfolio</h1>
+  <h1>Contact Me</h1>
 </header>
 
-<nav>
+<nav aria-label="Main navigation">
   <ul>
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="data.html">Projects</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="Tania_Ungureanu_CV.pdf">CV</a></li>  
+    <li><a href="contact.html" aria-current="page">Contact</a></li>
+    <li><a href="card.html">Card</a></li>
+    <li><a href="overview.html">Overview</a></li>
+    <li><a href="chatbot.html">Chatbot</a></li>
   </ul>
 </nav>
 
 <main id="main-content">
   <section>
-  <h2>Contact Me</h2>
+    <h2>Form</h2>
 
   <form action="#" method="post" enctype="text/plain">
 
     <fieldset>
       <legend>Send a message</legend>
 
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" placeholder="example@email.com" required>
+      <div class="form-group">
+        <label for="phone">Phone number (optional):</label>
+        <input type="tel" id="phone" name="phone">
+      </div>
 
-      <label for="phone">Phone (optional):</label>
-      <input type="tel" id="phone" name="phone">
+      <div class="form-group">
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject">
+      </div>
 
-      <label for="subject">Subject:</label>
-      <input type="text" id="subject" name="subject">
-
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" required></textarea>
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
 
     </fieldset>
     <fieldset>
       <legend>Message type</legend>
 
-      <input type="radio" id="hi" name="type" value="Just saying hi" required>
-      <label for="hi">Just saying hi</label>
+      <div class="radio-group">
+        <input type="radio" id="hi" name="type" value="Just saying hi" required>
+        <label for="hi">Just saying hi</label>
+      </div>
 
-      <input type="radio" id="suggestions" name="type" value="Suggestions">
-      <label for="suggestions">Suggestions</label>
+      <div class="radio-group">
+        <input type="radio" id="suggestions" name="type" value="Suggestions">
+        <label for="suggestions">Suggestions</label>
+      </div>
 
-      <input type="radio" id="idk" name="type" value="Opinion">
-      <label for="idk">Opinion</label>
+      <div class="radio-group">
+        <input type="radio" id="idk" name="type" value="Opinion">
+        <label for="idk">Opinion</label>
+      </div>
+
     </fieldset>
 
     <button type="submit">Send</button>

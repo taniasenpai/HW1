@@ -1,0 +1,152 @@
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  line-height: 1.7;
+  background-color: #fff0f5;
+  color: #4a2c3a;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+h1 {
+  font-size: 2.3rem;
+}
+
+h2 {
+  color: #d63384;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+header {
+  background: linear-gradient(to right, #ffc0cb, #ffb6c1);
+  text-align: center;
+  border-bottom: 3px solid #ff9bb3;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+
+.nav {
+  background: #ffb6c1;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 15px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  background: #ff69b4;
+  padding: 10px 16px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  background: #ff1493;
+  transform: translateY(-2px);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+.profile,
+.section,
+.contact {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill {
+  background: #ffe3f0;
+  border: 1px solid #f3a6c9;
+  padding: 8px 12px;
+  border-radius: 10px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #f3a6c9;
+  padding: 15px;
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  background: #ffe3f0;
+}
+
+.card.highlight {
+  border: 2px solid #ff1493;
+  background: #fff5fa;
+}
+
+footer {
+  text-align: center;
+  background: #ffc0cb;
+  margin-top: 20px;
+  font-size: 0.95rem;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .layout {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.contact a {
+  color: #d63384;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+  color: #ff1493;
+}
